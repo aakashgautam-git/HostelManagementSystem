@@ -1,0 +1,20 @@
+# Optional convenience: spin up MySQL 8 with the whole schema pre-loaded.
+# MySQL runs every file in /docker-entrypoint-initdb.d in alphabetical order on
+# first start, so 01_schema.sql ... 06_seed.sql load automatically and in order.
+#
+#   docker compose up -d        # start MySQL on localhost:3306 (password: rootpw)
+#   docker compose down -v      # stop and wipe the data volume
+services:
+  db:
+    image: mysql:8
+    container_name: hostel_db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d:ro
+      - hostel_data:/var/lib/mysql
+
+volumes:
+  hostel_data:
