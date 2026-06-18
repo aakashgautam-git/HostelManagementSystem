@@ -1,4 +1,4 @@
-# 🏠 Hostel & Mess Management System
+# Hostel & Mess Management System
 
 A full-stack hostel/mess management web application built as a **DBMS academic
 project**. The database layer is intentionally rich — it uses **views, stored
@@ -21,7 +21,7 @@ at and explain.
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Student registration & login** (JWT auth, separate admin login)
 - **Room allocation** — students assigned to rooms with bed capacity tracking
@@ -32,7 +32,7 @@ at and explain.
 
 ---
 
-## 🗂 Repository structure
+##  Repository structure
 
 ```
 dbms/
@@ -60,7 +60,7 @@ dbms/
 
 ---
 
-## ✅ Prerequisites
+##  Prerequisites
 
 - **MySQL 8** (or use the bundled `docker-compose.yml`)
 - **Python 3.10–3.13** — Django 5.1 does **not** support Python 3.14 yet. If your
@@ -70,7 +70,7 @@ dbms/
 
 ---
 
-## 🚀 Setup
+##  Setup
 
 ### Step 1 — Database
 
@@ -142,7 +142,7 @@ Open **http://localhost:5173**.
 
 ---
 
-## 🧩 Database components (the graded bits)
+##  Database components (the graded bits)
 
 ### Views — `database/02_views.sql`
 
@@ -226,7 +226,7 @@ All routes are under `http://localhost:8000/api`. Protected routes need
 
 ---
 
-## 🧪 How this was verified
+##  How this was verified
 
 The database layer was loaded into a real **MySQL 8** instance and every object
 was exercised:
@@ -252,7 +252,7 @@ CALL allocate_room(5, 1);                 -- -> ERROR 1644 "No vacancy: room is 
 
 ---
 
-## 🎓 Requirement → file map (for grading)
+##  Requirement → file map (for grading)
 
 | Requirement | Where |
 |-------------|-------|
